@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/index.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1> Daazer </h1>
-          <h2>Deezer for data nerds</h2>
-        </div>
+        <Header />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
