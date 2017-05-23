@@ -1,5 +1,4 @@
 import { FETCH } from './constants';
-import { getSessionId } from './selectors';
 import { apiUrl } from '../../config';
 
 /**

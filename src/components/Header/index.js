@@ -1,3 +1,3 @@
-import Navigation from './component';
+import Header from './component';
 
-export default Navigation;
+export default Header;

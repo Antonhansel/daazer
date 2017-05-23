@@ -1,15 +1,33 @@
-import { SET_SONGS } from './constants';
+import { SET_SONGS, SET_NEXT, SET_TOTAL } from './constants';
 
 const INITIAL_STATE = {
   songs: [],
+  next: null,
+  total: null,
 };
 
 function setSongs(state, action) {
-  return Object.assign({}, state, action.songs);
+  return Object.assign({}, state, {
+    songs: action.songs}
+  );
+}
+
+function setNextQuery(state, action) {
+  return Object.assign({}, state, {
+    next: action.next
+  });
+}
+
+function setTotal(state, action){
+  return Object.assign({}, state, {
+    total: action.total
+  });
 }
 
 const FUNCTION_BY_ACTION = {
   [SET_SONGS]: setSongs,
+  [SET_NEXT]: setNextQuery,
+  [SET_TOTAL]: setTotal,
 };
 
 
