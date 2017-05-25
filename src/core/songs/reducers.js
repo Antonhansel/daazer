@@ -1,9 +1,10 @@
-import { SET_SONGS, SET_NEXT, SET_TOTAL } from './constants';
+import { SET_SONGS, SET_NEXT, SET_TOTAL, SET_SORT_CONFIG } from './constants';
 
 const INITIAL_STATE = {
   songs: [],
   next: null,
   total: null,
+  sortConfig: null,
 };
 
 function setSongs(state, action) {
@@ -24,10 +25,17 @@ function setTotal(state, action){
   });
 }
 
+function setSortConfig(state, action){
+  return Object.assign({}, state, {
+    sortConfig: action.sortConfig
+  });
+}
+
 const FUNCTION_BY_ACTION = {
   [SET_SONGS]: setSongs,
   [SET_NEXT]: setNextQuery,
   [SET_TOTAL]: setTotal,
+  [SET_SORT_CONFIG]: setSortConfig,
 };
 
 

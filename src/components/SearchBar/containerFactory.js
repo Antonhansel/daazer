@@ -9,7 +9,7 @@ function mapStateToProps() {
 function mapDispatchToProps(dispatch) {
   return {
     onSearchStarted: (fields) => {
-      dispatch(searchSongs(fields.query));
+      dispatch(searchSongs({ query: fields.query }));
     },
   };
 }

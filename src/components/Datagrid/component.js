@@ -3,10 +3,14 @@ import ReactDataGrid from 'react-data-grid';
 import { PropTypes } from 'prop-types';
 import './Datagrid.css';
 
+
 class Datagrid extends React.Component {
   constructor(props) {
     super(props);
     this.rowGetter = this.rowGetter.bind(this);
+    this.state = {
+      calledMoreRowsAtSize: 0
+    };
   }
 
   rowGetter(i) {
@@ -26,20 +30,16 @@ class Datagrid extends React.Component {
   }
 
   render() {
-    const { songs } = this.props;
-
+    const { songs, onGridSort } = this.props;
     if (songs.length > 0) {
-      console.log(songs[0]);
-      console.log(this.getColumns(songs[0]));
       return (
-        <div>
           <ReactDataGrid
             columns={this.getColumns(songs[0])}
             rowGetter={this.rowGetter}
             rowsCount={songs.length}
-
-            minHeight={500} />);
-        </div>
+            minHeight={1000}
+            onGridSort={onGridSort}
+          />
       );
     }
     return null;
@@ -48,6 +48,8 @@ class Datagrid extends React.Component {
 
 Datagrid.propTypes = {
   songs: PropTypes.array.isRequired,
+  onBottomReached: PropTypes.func.isRequired,
+  onGridSort: PropTypes.func.isRequired,
 };
 
 export default Datagrid;
