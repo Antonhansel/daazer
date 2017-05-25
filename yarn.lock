@@ -4690,7 +4690,7 @@ promise@7.1.1, promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.6, prop-types@~15.5.7:
+prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@~15.5.7:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -4785,6 +4785,12 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-data-grid-addons@^2.0.44:
+  version "2.0.44"
+  resolved "https://registry.yarnpkg.com/react-data-grid-addons/-/react-data-grid-addons-2.0.44.tgz#aabf9b488ff17e756cb6e8fdab7f3e3f2be5f04f"
+  dependencies:
+    react-data-grid "^2.0.44"
+
 react-data-grid@^2.0.44:
   version "2.0.44"
   resolved "https://registry.yarnpkg.com/react-data-grid/-/react-data-grid-2.0.44.tgz#73ef51e40cba2b49ea8d68701f9fa01ad51b0737"
@@ -4830,6 +4836,12 @@ react-error-overlay@^1.0.2:
     react-dev-utils "^1.0.2"
     settle-promise "1.0.0"
     source-map "0.5.6"
+
+react-infinite-scroller@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-infinite-scroller/-/react-infinite-scroller-1.0.12.tgz#a51fcb5dd82bc1b6207f69be747bd7b872917fa4"
+  dependencies:
+    prop-types "^15.5.8"
 
 react-redux@^5.0.5:
   version "5.0.5"

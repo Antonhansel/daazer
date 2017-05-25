@@ -1,8 +1,7 @@
 .input {
-  display: block;
   box-sizing: border-box;
-  padding: 10px 16px;
-  width: 100%;
+  padding: 16px 16px;
+  width: 60%;
   height: 46px;
   outline: 0;
   border: 1px solid #ccc;
@@ -13,4 +12,8 @@
   font-size: 18px;
   line-height: 1.3333333;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.searchBar {
+  text-align: center;
 }

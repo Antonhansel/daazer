@@ -12,6 +12,7 @@ import { ORDER_DESC } from './constants';
 export function searchSongs(params) {
   return async function searchSongsThunk(dispatch, getState) {
     const state = getState();
+    const songs = getSongs(state);
     let nextQuery = getNext(state);
     const fetchData = {
       method: 'GET',
@@ -33,6 +34,7 @@ export function searchSongs(params) {
       let newSong = Object.assign({}, song, {
         albumTitle: song.album.title,
         artistName: song.artist.name,
+        image: song.album.cover,
       });
       delete newSong.album;
       delete newSong.artist;
@@ -42,7 +44,7 @@ export function searchSongs(params) {
       delete newSong.explicit_lyrics;
       return newSong;
     })
-    dispatch(setSongs(body.data));
+    dispatch(setSongs(params.next ? songs.concat(body.data) : body.data));
     nextQuery = body.next ? body.next.split('http://api.deezer.com/')[1] : null;
     dispatch(setNextQuery(nextQuery));
     dispatch(setTotal(body.total));

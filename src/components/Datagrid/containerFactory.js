@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getSongs } from '../../core/songs/selectors';
+import { getSongs, getNext } from '../../core/songs/selectors';
 import { searchSongs, sortResults } from '../../core/songs/action-creators';
 import { setSortConfig } from '../../core/songs/actions';
 
@@ -11,7 +11,8 @@ const emptyArray = [];
 
 function mapStateToProps(state) {
   return {
-    songs: getSongs(state) || emptyArray,
+    rows: getSongs(state) || emptyArray,
+    hasMore: !!getNext(state),
   };
 }
 
