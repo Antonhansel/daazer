@@ -8,7 +8,7 @@ const SearchBar = ({
   onSearchStarted,
 }) => {
   return (
-    <div>
+    <div className="searchBar">
       <form onSubmit={handleSubmit(onSearchStarted.bind(this))}>
         <Field
           component="input"
