@@ -24,7 +24,8 @@
   "proxy": "http://api.deezer.com/",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node ./bin/server.js",
+    "build": "react-scripts build",
+    "serve": "node ./bin/server.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
